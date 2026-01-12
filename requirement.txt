@@ -1,2 +1,4 @@
 langchain
-
+streamlit
+json
+os
