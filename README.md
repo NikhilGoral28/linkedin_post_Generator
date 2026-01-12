@@ -11,6 +11,10 @@ This tool analyzes the posts of a LinkedIn influencer and helps create new posts
 * **Customizable outputs**: Select topic, length, language (English or Hinglish), and generate posts in the influencer’s style.
 
 ---
+## App Screenshot
+
+![UI Screenshot](img/landing.png)
+
 
 ## How It Works
 
