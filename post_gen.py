@@ -13,7 +13,10 @@ def get_length_str(length):
 
 def generates_post(length, language,tag):
     prompt = get_prompt(length,language,tag)
-    response = llm.invoke(prompt)
+    try:
+        response = llm.invoke(prompt)
+    except Exception as e:
+        raise ValueError("Invalid API")
 
     return response.content
 

@@ -5,6 +5,8 @@ from post_gen import generates_post
 length_options = ["Short","Medium","Long"]
 language_options = ["English","Hinglish"]
 
+
+
 def main():
     st.title("LinkedIn Post Generator")
 
@@ -30,7 +32,12 @@ def main():
         selected_lan = st.selectbox("Language",options=language_options)
 
     if st.button("Generate"):
-        post = generates_post(selected_length,selected_lan,selected_tag)
-        st.write(post)
+        try:
+            post = generates_post(selected_length, selected_lan, selected_tag)
+            st.write(post)
+        except ValueError as e:
+            st.error(str(e))
+
+
 if __name__ == "__main__":
     main()
